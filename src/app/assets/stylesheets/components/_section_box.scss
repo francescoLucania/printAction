@@ -14,8 +14,19 @@
     @include mq(md) {
         padding: 10rem 0;
     }
-    //
-    //&:nth-child(2n) {
-    //    background: $color-section-background;
-    //}
+
+    &__title {
+        @include h2;
+        width: 100%;
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @include mq(md) {
+            margin-bottom: 4rem;
+        }
+
+        @include mq(lg) {
+            margin-bottom: 5rem;
+        }
+    }
 }

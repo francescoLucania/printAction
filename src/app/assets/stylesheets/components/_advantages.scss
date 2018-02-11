@@ -26,21 +26,6 @@
         flex-wrap: wrap;
     }
 
-    &__title {
-        @include h2;
-        width: 100%;
-        margin-bottom: 3rem;
-        text-align: center;
-
-        @include mq(md) {
-            margin-bottom: 4rem;
-        }
-
-        @include mq(lg) {
-            margin-bottom: 5rem;
-        }
-    }
-
     &__column {
 
         @include mq(sm) {
