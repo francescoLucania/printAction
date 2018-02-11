@@ -3,11 +3,11 @@ Error: File to import not found or unreadable: ../vendors/normalize-css/normaliz
         on line 1 of application.scss
 
 1: @import "../vendors/normalize-css/normalize";
-2: 
-3: @import "config";
-4: @import "functions";
-5: @import "variables";
-6: @import "mixins";
+2: @import "../vendors/slick-carousel/slick/slick.scss";
+3: 
+4: @import "config";
+5: @import "functions";
+6: @import "variables";
 
 Backtrace:
 application.scss:1
@@ -55,4 +55,4 @@ application.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../vendors/normalize-css/normalize.\A         on line 1 of application.scss\A \A 1: @import \"../vendors/normalize-css/normalize\";\A 2: \A 3: @import \"config\";\A 4: @import \"functions\";\A 5: @import \"variables\";\A 6: @import \"mixins\";"; }
+  content: "Error: File to import not found or unreadable: ../vendors/normalize-css/normalize.\A         on line 1 of application.scss\A \A 1: @import \"../vendors/normalize-css/normalize\";\A 2: @import \"../vendors/slick-carousel/slick/slick.scss\";\A 3: \A 4: @import \"config\";\A 5: @import \"functions\";\A 6: @import \"variables\";"; }

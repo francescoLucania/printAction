@@ -4,7 +4,7 @@
 createMq([
     ['sm',  767],
     ['md',  768],
-    ['lg', 1025]
+    ['lg', 1380]
 ]);
 
 const TRANSITION_DURATION_BASE = 200;
