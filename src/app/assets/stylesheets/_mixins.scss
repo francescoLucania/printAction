@@ -342,7 +342,7 @@
 }
 
 @mixin text-base {
-    @include font(1.6rem, 2.4rem);
+    @include font(1.6rem, 2.6rem);
 }
 
 @mixin text-lg {
@@ -350,11 +350,11 @@
 }
 
 @mixin text-md {
-    @include font(2.6rem, 3.6rem);
+    @include font(1.6rem, 2.6rem);
 }
 
 @mixin text-sm {
-    @include font(1.8rem, 2.4rem);
+    @include font(1.6rem, 2.2rem);
 }
 
 // Headings
@@ -380,14 +380,17 @@
     }
 }
 
-@mixin h2($font-weight: $font-weight-bold) {
-    @include font(1.6rem, 2.4rem);
-    font-family: $font-family-bold;
+@mixin h2($font-weight: $font-weight-title) {
+    @include font(2.4rem, 2.8rem);
     text-transform: uppercase;
-    font-weight: $font-weight;
+    font-weight: $font-weight-title;
 
     @include mq(md) {
-        @include font(1.8rem, 2.4rem);
+        @include font(3.6rem, 4rem);
+    }
+
+    @include mq(lg) {
+        @include font(4.2rem, 5rem);
     }
 }
 
