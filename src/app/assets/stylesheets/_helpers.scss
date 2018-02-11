@@ -13,3 +13,18 @@
 .text-lead {
     @include text-lg;
 }
+
+.not-md {
+
+    @include mq(lg) {
+        display: none;
+    }
+}
+
+.is-lg {
+    display: none;
+
+    @include mq(lg) {
+        display: block;
+    }
+}

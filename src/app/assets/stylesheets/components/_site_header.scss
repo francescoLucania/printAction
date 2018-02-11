@@ -18,11 +18,15 @@
     right: 0;
     z-index: 100;
     line-height: 1;
-    padding: 3rem 0 2.9rem;
+    padding: 3rem 2rem 2.9rem;
     width: auto;
     border-bottom: 1px solid $color-border;
     background-color: $color-section-background;
     transition: padding  $transition-duration-medium;
+
+    @include mq(md) {
+        padding: 3rem 4rem 2.9rem;
+    }
 
     @include mq(lg) {
         border-color: transparent;
@@ -61,7 +65,7 @@
     }
 
     &__logo-box {
-        max-width: 11.5rem;
+        max-width: 10rem;
         display: block;
 
 
@@ -80,8 +84,11 @@
         display: flex;
 
         > .button {
+            white-space: nowrap;
+
             @include mq(sm) {
-                min-width: 16.5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
             }
         }
     }

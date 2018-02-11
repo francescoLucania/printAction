@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+.promo {
+    position: relative;
+    background: $color-section-background;
+
+    @include mq(lg) {
+        background: transparent;
+    }
+
+    &__article {
+        width: 100%;
+
+
+        @include mq(sm) {
+            padding-left: 2rem;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+
+        @include mq(md) {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+        }
+
+        @include mq(lg) {
+            text-align: center;
+            margin: 0;
+        }
+
+        > article {
+            position: relative;
+
+            @include mq(sm) {
+                padding-right: 25%;
+            }
+
+            @include mq(md) {
+                width: 50%;
+                padding: 0 2rem 0 4rem;
+            }
+
+            @include mq(lg) {
+                width: 56%;
+                padding: 0 4rem;
+                transform: translateY(-4.5%);
+            }
+
+            > p {
+                @include text-sm;
+
+                @include mq(md) {
+                    @include text-md;
+                }
+
+                @include mq(lg) {
+                    @include text-lg;
+                }
+            }
+
+            > img {
+                display: none;
+                vertical-align: top;
+
+                @include mq(sm) {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 25%;
+                    height: auto;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__title {
+        @include h1;
+        margin-bottom: 2rem;
+
+        @include mq(md) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__button-box {
+        margin-top: 4rem;
+        text-align: center;
+
+        @include mq(md) {
+            margin-top: 3rem;
+            text-align: left;
+        }
+
+        @include mq(lg) {
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        > a  {
+            min-width: 22rem;
+        }
+    }
+
+    &__image-desktop-left,
+    &__image-desktop-right {
+        display: none;
+
+        @include mq(lg) {
+            display: block;
+            max-width: 20%;
+        }
+
+        > img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
+    &__image-desktop-left {
+
+        @include mq(md) {
+            display: none;
+        }
+
+        @include mq(lg) {
+            display: block;
+        }
+
+    }
+
+    &__image-desktop-right {
+
+        @include mq(sm) {
+            display: none;
+        }
+
+        @include mq(md) {
+            display: block;
+            width: 50%;
+        }
+    }
+
+}

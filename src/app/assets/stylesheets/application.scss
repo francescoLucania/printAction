@@ -1,4 +1,4 @@
-@import "../vendors/normalize-css/normalize.css";
+@import "../vendors/normalize-css/normalize";
 
 @import "config";
 @import "functions";
@@ -33,3 +33,5 @@
 @import "components/site_main";
 @import "components/site_footer";
 @import "components/section_box";
+
+@import "components/promo";
