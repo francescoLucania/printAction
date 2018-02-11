@@ -1,0 +1,88 @@
+@keyframes main-animation {
+
+    from {
+        opacity: 0;
+        transform: translate(0,1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    line-height: 1;
+    padding: 3rem 0 2.9rem;
+    width: auto;
+    border-bottom: 1px solid $color-border;
+    background-color: $color-section-background;
+    transition: padding  $transition-duration-medium;
+
+    @include mq(lg) {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+
+
+    &.is-fixed-alt {
+        border-color: $color-border;
+        background: $color-section-background;
+    }
+
+    &.is-fixed {
+        padding: 2rem 0 1.9rem;
+        border-color: $color-border;
+        background: $color-section-background;
+    }
+
+    &.is-hidden {
+
+        @include mq(lg) {
+            right: 1.5rem;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mq(lg) {
+            max-width: 160.3rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__logo-box {
+        max-width: 11.5rem;
+        display: block;
+
+
+        @include mq(md) {
+            max-width: 16rem;
+        }
+
+        > img {
+            width: auto;
+            vertical-align: top;
+        }
+    }
+
+    &__button-box {
+        position: relative;
+        display: flex;
+
+        > .button {
+            @include mq(sm) {
+                min-width: 16.5rem;
+            }
+        }
+    }
+}

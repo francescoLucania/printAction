@@ -1,0 +1,21 @@
+.section-box {
+    position: relative;
+    padding: 6rem 0;
+    background: $color-body-background;
+
+    &:first-child {
+        padding-top: 0;
+
+        @include mq(md) {
+            padding-top: 16rem;
+        }
+    }
+
+    @include mq(md) {
+        padding: 10rem 0;
+    }
+    //
+    //&:nth-child(2n) {
+    //    background: $color-section-background;
+    //}
+}

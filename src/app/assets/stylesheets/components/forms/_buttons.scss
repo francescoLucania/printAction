@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@if $enable-buttons == true {
+    .button {
+        @include interact(background, rgba($color-brand, .85));
+        @include font(1.4rem,1.4rem);
+        position: relative;
+        display: inline-block;
+        padding: 2.1rem 2.75rem 1.9rem;
+        background: $color-brand;
+        box-shadow: 0 1.3rem 2.8rem 0 rgba(9, 93, 187, 0.16);
+        border-radius: 2.5rem;
+        outline: none !important;
+        font-family: $font-family-bold;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        transition: $transition-duration-medium;
+
+        @at-root a#{&} {
+            text-decoration: none;
+        }
+
+        &--read-more {
+            position: relative;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            width: 17rem;
+            height: 5.4rem;
+            overflow: hidden;
+
+            > img,
+            > span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: $transition-duration-base;
+                backface-visibility: hidden;
+            }
+
+            > img {
+                opacity: 0;
+            }
+
+            @include mq(xl) {
+                &:hover {
+                    > span {
+                        opacity: 0;
+                    }
+
+                    > img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &--next-more {
+            min-width: 19rem;
+        }
+
+        &--transparent {
+            @include interact(background, transparent);
+            @include interact(opacity, .85);
+            padding: 1.7rem 2.45rem;
+            border: solid .3rem;
+            background: transparent;
+            box-shadow: none;
+            color:  $color-brand;
+
+            > span {
+                display: block;
+            }
+        }
+
+        &--transparent-alternative {
+            color: #fff;
+        }
+
+        &--map {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 2.45rem;
+
+            > img {
+                margin-right: 1.5rem;
+                vertical-align: top;
+
+                @include mq(xs) {
+                    display: none;
+                }
+            }
+        }
+
+        &--back {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 2.45rem;
+
+            @include mq(xs) {
+                @include size(4.4rem);
+                padding: 1rem;
+            }
+
+            > img {
+                margin-right: 1.5rem;
+                width: 2.4rem;
+                vertical-align: top;
+
+                @include mq(xs) {
+                }
+            }
+
+            span {
+                @include mq(xs) {
+                    display: none;
+                }
+            }
+
+            @include mq(xs) {
+                > span {
+                    display: none;
+                }
+            }
+
+            &.is-hidden {
+                @include interact(opacity,0);
+                opacity: 0;
+            }
+
+        }
+
+        &--next {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem 2.45rem;
+
+            > img {
+                vertical-align: top;
+            }
+
+            &[data-big] {
+                padding: 2.2rem 2.45rem;
+                width: 17rem;
+            }
+        }
+
+        &:disabled {
+            opacity: .2;
+        }
+
+        &:active {
+            transform: translateY(.2rem);
+        }
+    }
+}

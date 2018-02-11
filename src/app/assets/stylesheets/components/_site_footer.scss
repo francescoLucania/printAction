@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.site-footer {
+    align-self: flex-end;
+    margin-top: auto;
+    z-index: 1;
+    border-top: 1px solid #cccccc;
+
+    &.is-bottom-gutter {
+        @include mq(sm) {
+            margin-bottom: 4.3rem; // magic number
+        }
+    }
+
+    &__contact {
+        padding: 3.5rem 0;
+
+        @include mq(md) {
+            padding: 2rem 0;
+        }
+    }
+
+    &__contact-grid {
+        display: flex;
+
+        @include mq(sm) {
+            flex-direction: column;
+            text-align: center;
+
+            > p {
+                order: 2;
+            }
+        }
+
+        @include mq(md) {
+            justify-content: space-between;
+            align-items: center;
+
+            > p {
+                @include font(2.4rem,3rem);
+                order: 1;
+            }
+        }
+
+        > p {
+            @include font(1.4rem,2rem);
+            color: $color-lighter;
+
+            > br {
+                @include mq(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__mail-link {
+        @include font(1.6rem,1.6rem);
+        @include interact(opacity, .85);
+        order: 1;
+        display: flex;
+        align-items: center;
+        color: $color-light;
+
+        @include mq(sm) {
+            justify-content: center;
+            margin-bottom:1rem;
+        }
+
+        @include mq(md) {
+            order: 2;
+            display: inline-flex;
+        }
+
+        > img {
+            margin-right: 1rem;
+            vertical-align: top;
+        }
+
+        > span {
+            display: block;
+        }
+    }
+}
