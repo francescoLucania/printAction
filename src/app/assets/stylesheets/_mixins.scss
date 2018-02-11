@@ -382,7 +382,6 @@
 
 @mixin h2($font-weight: $font-weight-title) {
     @include font(2.4rem, 2.8rem);
-    text-transform: uppercase;
     font-weight: $font-weight-title;
 
     @include mq(md) {
@@ -400,9 +399,8 @@
     font-weight: $font-weight;
 }
 
-@mixin h4($font-weight: $font-weight-title) {
+@mixin h4($font-weight: $font-weight-bold) {
     @include heading;
-    @include font(3rem, 3rem);
     font-weight: $font-weight;
 }
 

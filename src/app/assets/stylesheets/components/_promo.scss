@@ -140,6 +140,7 @@
         }
 
         @include mq(md) {
+            align-self: flex-end;
             display: block;
             width: 50%;
         }
