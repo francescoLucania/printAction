@@ -2,6 +2,10 @@
 
 .programs {
 
+    @include mq(sm) {
+        margin: 0 -2rem;
+    }
+
     &__navigate {
 
         @include mq(md) {
@@ -32,15 +36,34 @@
 }
 
 .programs-tab {
+    display: flex;
+    align-items: stretch;
     background: #fff;
 
+    &:first-child {
+        margin-top: 3rem;
+
+        @include mq(md) {
+            margin-top: 5rem;
+        }
+    }
+
+    @include mq(md) {
+        margin: 4rem -4rem 0;
+    }
+
     &__products {
+        position: relative;
+        width: 65%;
+
         @include mq(md) {
             width: 60%;
         }
     }
 
     &__complementary {
+        width: 35%;
+
         @include mq(md) {
             width: 40%;
         }
@@ -49,15 +72,285 @@
     &__header {
         @include font(1.2rem,1.6rem);
         font-family: $font-family-bold;
-        padding: 2rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
         background: $color-current;
+        text-align: center;
 
         @include mq(md) {
             @include text-small;
+            padding: 2;
+            height: 6rem;
+            align-items: center;
         }
 
         @include mq(lg) {
             @include font(1.8rem,2rem);
+            height: auto;
+        }
+
+        > span {
+            display: block;
+            text-align: center;
+
+            @include mq(md) {
+                width: 50%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 4rem;
+            }
+        }
+    }
+
+
+    &__products-grid,
+    &__complementary-grid {
+        position: relative;
+        background: #fff;
+
+        @include mq(md) {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            padding: 4rem 2rem;
+        }
+    }
+
+    &__products-grid {
+        @include mq(sm) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &__complementary-grid {
+        position: relative;
+
+        &[data-symbol] {
+            @include mq(md) {
+
+                &::before {
+                    @include text-sm;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%,-50%);
+                    color: $color-current;
+                    content: attr(data-symbol);
+                }
+            }
+        }
+    }
+
+    &__product-item,
+    &__complementary-item {
+        position: relative;
+        text-align: center;
+
+        &[data-symbol] {
+            @include mq(md) {
+
+                &::before {
+                    @include text-sm;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(-50%,-50%);
+                    z-index: 10;
+                    color: $color-current;
+                    content: attr(data-symbol);
+                }
+            }
+        }
+    }
+
+
+    &__product-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq(sm) {
+            padding-bottom: 4rem;
+        }
+
+        @include mq(md) {
+            width: 50%;
+        }
+
+        @include mq(lg) {
+            width: 27rem;
+        }
+
+        > span {
+            @include text-sm;
+            display: block;
+            text-transform: uppercase;
+            margin-top: auto;
+        }
+
+        &[data-quantitative-modification] {
+
+            @include mq(lg) {
+                @include col-size(1/3);
+            }
+        }
+    }
+
+    &__complementary-item {
+        text-align: center;
+
+        @include mq(md) {
+            width: 50%;
+        }
+
+        @include mq(lg) {
+            padding: 0;
+        }
+
+        .programs-tab__image {
+
+            @include mq(md) {
+                padding: 0 1.5rem;
+            }
+
+            @include mq(lg) {
+                padding: 0;
+            }
+        }
+
+        > span {
+            @include text-sm;
+            display: block;
+            margin-top: auto;
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: inline-block;
+        line-height: 1;
+        margin-bottom: .5rem;
+
+        > img {
+            display: block;
+            line-height: 1;
+            width: auto;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
+    &__action {
+        @include size(6rem);
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(10%,-10%);
+        z-index: 10;
+        border-radius: 50%;
+        overflow: hidden;
+        background: $color-success;
+
+        &[data-action] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+
+            }
+        }
+    }
+
+    &__action-content {
+        text-align: center;
+        color: #fff;
+
+        > span,
+        > b {
+            display: block;
+        }
+
+        > span {
+            @include font(1.2rem,1.8rem);
+        }
+
+        > b {
+            @include font(1.4rem,1.8rem);
+            font-family: $font-family-bold;
+        }
+    }
+
+
+    .arrows {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        justify-content: center;
+
+        @include mq(sm) {
+            display: flex !important; // overrides slick
+        }
+
+        @include mq(md) {
+            display: none;
+        }
+
+
+        &__item {
+            @include size(3.2rem);
+            background: {
+                color: transparent;
+                image: url(../img/arrow.png);
+                position: 50% 50%;
+                size: contain;
+            };
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:first-child {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // slick styles
+
+    .slick-dots {
+        position: absolute;
+        bottom: 6.5rem;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @include mq(md) {
+            display: none;
+        }
+
+        > li {
+            @include size(.6rem);
+            border-radius: 50%;
+            background: #afafaf;
+            transition: $transition-duration-base;
+
+            &.slick-active {
+                background: $color-brand;
+            }
+
+            &:not(:last-child) {
+                margin-right: .6rem;
+            }
         }
     }
 

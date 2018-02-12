@@ -58,6 +58,13 @@ $(function() {
     }
 
     if (Modernizr.mq(mq.md.str)) {
-        itemOpenContent();
+
+        if (Modernizr.mq(mq.lg.str)) {
+
+        } else {
+            itemOpenContent();
+        }
+
+
     }
 });

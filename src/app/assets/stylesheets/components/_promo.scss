@@ -109,9 +109,13 @@
     &__image-desktop-right {
         display: none;
 
+
         @include mq(lg) {
             display: block;
             max-width: 20%;
+            opacity: 0;
+            will-change: opacity;
+            animation: body-animation 2s linear .5s 1 alternate forwards;
         }
 
         > img {

@@ -3,8 +3,7 @@
 .site-footer {
     align-self: flex-end;
     margin-top: auto;
-    z-index: 1;
-    border-top: 1px solid #cccccc;
+    width: 100%;
 
     &.is-bottom-gutter {
         @include mq(sm) {
@@ -54,13 +53,14 @@
         }
     }
 
-    &__mail-link {
+    &__phone-link {
         @include font(1.6rem,1.6rem);
         @include interact(opacity, .85);
         order: 1;
         display: flex;
         align-items: center;
         color: $color-light;
+        text-decoration: none;
 
         @include mq(sm) {
             justify-content: center;

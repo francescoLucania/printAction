@@ -8,6 +8,17 @@
     box-sizing: border-box;
 }
 
+@keyframes body-animation {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 html {
     font-size: 62.5%;
 
@@ -27,6 +38,11 @@ body {
         family: $font-family-text;
         weight: $font-weight-text;
     }
+    opacity: 0;
+    will-change: opacity;
+    animation: body-animation 2s linear .5s 1 alternate forwards;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 
     @if $enable-sticky-footer == true {
         display: flex;

@@ -16,17 +16,22 @@
         text-transform: uppercase;
         color: #fff;
         transition: $transition-duration-medium;
+        cursor: default;
 
         @at-root a#{&} {
             text-decoration: none;
         }
 
         &.is-current {
+            @include interact(background, transparent);
+            @include interact(opacity, .85);
+            padding: 1.7rem 2.45rem;
+            border: solid .3rem;
             background: transparent;
+            box-shadow: none;
             border-color: $color-current;
             color: $color-lighter;
             pointer-events: none;
-            cursor: default;
         }
 
         &--read-more {
