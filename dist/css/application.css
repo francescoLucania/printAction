@@ -993,6 +993,14 @@ a.button {
   text-decoration: none;
 }
 
+.button.is-current {
+  background: transparent;
+  border-color: #e1e1e1;
+  color: #969696;
+  pointer-events: none;
+  cursor: default;
+}
+
 .button--read-more {
   position: relative;
   display: -webkit-box;
@@ -2688,6 +2696,17 @@ a.button {
   }
 }
 
+.catalog__sub-title {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.catalog__sub-title + .catalog__description {
+  margin-top: 1rem;
+}
+
 .catalog__grid-box {
   position: relative;
 }
@@ -3088,4 +3107,76 @@ a.button {
 
 .catalog .slick-dots > li:not(:last-child) {
   margin-right: .6rem;
+}
+
+@media all and (min-width: 768px) {
+  .programs__navigate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.programs__navigate > .button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media all and (max-width: 767px) {
+  .programs__navigate > .button {
+    display: block;
+  }
+  .programs__navigate > .button:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .programs__navigate > .button {
+    min-width: 30rem;
+  }
+  .programs__navigate > .button:not(:last-child) {
+    margin-right: 3rem;
+  }
+}
+
+.programs-tab {
+  background: #fff;
+}
+
+@media all and (min-width: 768px) {
+  .programs-tab__products {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .programs-tab__complementary {
+    width: 40%;
+  }
+}
+
+.programs-tab__header {
+  font-size: 1.2rem;
+  line-height: 1.33333;
+  font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  padding: 2rem;
+  background: #e1e1e1;
+}
+
+@media all and (min-width: 768px) {
+  .programs-tab__header {
+    font-size: 1.4rem;
+    line-height: 1.42857;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .programs-tab__header {
+    font-size: 1.8rem;
+    line-height: 1.11111;
+  }
 }

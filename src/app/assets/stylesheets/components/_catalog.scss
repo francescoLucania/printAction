@@ -2,6 +2,16 @@
 
 .catalog {
 
+    &__sub-title {
+        @include font(2.4rem,3rem);
+        font-family: $font-family-bold;
+        text-align: center;
+
+        + .catalog__description {
+            margin-top: 1rem;
+        }
+    }
+
     &__grid-box {
         position: relative;
 

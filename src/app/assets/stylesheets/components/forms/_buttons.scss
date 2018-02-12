@@ -21,6 +21,14 @@
             text-decoration: none;
         }
 
+        &.is-current {
+            background: transparent;
+            border-color: $color-current;
+            color: $color-lighter;
+            pointer-events: none;
+            cursor: default;
+        }
+
         &--read-more {
             position: relative;
             display: flex;

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.programs {
+
+    &__navigate {
+
+        @include mq(md) {
+            display: flex;
+            justify-content: center;
+        }
+
+        > .button {
+            box-shadow: none;
+
+            @include mq(sm) {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            @include mq(md) {
+                min-width: 30rem;
+
+                &:not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+    }
+}
+
+.programs-tab {
+    background: #fff;
+
+    &__products {
+        @include mq(md) {
+            width: 60%;
+        }
+    }
+
+    &__complementary {
+        @include mq(md) {
+            width: 40%;
+        }
+    }
+
+    &__header {
+        @include font(1.2rem,1.6rem);
+        font-family: $font-family-bold;
+        padding: 2rem;
+        background: $color-current;
+
+        @include mq(md) {
+            @include text-small;
+        }
+
+        @include mq(lg) {
+            @include font(1.8rem,2rem);
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
