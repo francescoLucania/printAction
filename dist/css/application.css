@@ -1227,10 +1227,29 @@ a.button {
 }
 
 .input > input {
+  font-size: 1.6rem;
+  line-height: 1;
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
-  border: 1px solid rgba(18, 18, 18, 0.4);
+  padding: 1.4rem 1.9rem;
+  border: 1px solid #e1e1e1;
+  outline: none;
+}
+
+.input > input::-webkit-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.input > input:-ms-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.input > input::-ms-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.input > input::placeholder {
+  color: rgba(18, 18, 18, 0.4);
 }
 
 .input > input:disabled {
@@ -2290,7 +2309,7 @@ a.button {
   }
 }
 
-.site-footer__phone-link {
+.phone-link {
   font-size: 1.6rem;
   line-height: 1;
   -webkit-box-ordinal-group: 2;
@@ -2306,12 +2325,12 @@ a.button {
   text-decoration: none;
 }
 
-.mod_no-touchevents .site-footer__phone-link:hover, .mod_no-touchevents .site-footer__phone-link.hover {
+.mod_no-touchevents .phone-link:hover, .mod_no-touchevents .phone-link.hover {
   opacity: 0.85;
 }
 
 @media all and (max-width: 767px) {
-  .site-footer__phone-link {
+  .phone-link {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2320,7 +2339,7 @@ a.button {
 }
 
 @media all and (min-width: 768px) {
-  .site-footer__phone-link {
+  .phone-link {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -2330,12 +2349,12 @@ a.button {
   }
 }
 
-.site-footer__phone-link > img {
+.phone-link > img {
   margin-right: 1rem;
   vertical-align: top;
 }
 
-.site-footer__phone-link > span {
+.phone-link > span {
   display: block;
 }
 
@@ -2764,6 +2783,13 @@ a.button {
 .catalog__grid-box.not-actions .slick-dots,
 .catalog__grid-box.not-actions .arrows {
   display: none !important;
+}
+
+@media all and (max-width: 767px) {
+  .catalog__grid {
+    background: #fff;
+    padding-bottom: 9rem;
+  }
 }
 
 @media all and (min-width: 768px) {
@@ -3583,4 +3609,134 @@ a.button {
 
 .programs-tab .slick-dots > li:not(:last-child) {
   margin-right: .6rem;
+}
+
+.form-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url(../img/formbg.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.form-section__body {
+  position: relative;
+  z-index: 99;
+  padding: 3.5rem 3rem;
+  background: #f7f7f7;
+}
+
+@media all and (min-width: 768px) {
+  .form-section__body {
+    margin: 0 auto;
+    padding: 3.5rem 6rem;
+    width: 73rem;
+  }
+}
+
+.form-section__title {
+  font-size: 1.8rem;
+  line-height: 1.44444;
+  margin-bottom: 3rem;
+  font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form-section__form-grid {
+  margin-bottom: 3rem;
+}
+
+@media all and (min-width: 768px) {
+  .form-section__form-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .form-section__form-grid > .input:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .form-section__form-grid > .input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .form-section__form-grid > .input:last-child {
+    margin-left: 3rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .form-section__form-button-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.form-section__button-col {
+  text-align: center;
+}
+
+@media all and (max-width: 767px) {
+  .form-section__button-col:not(:first-child) {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .form-section__button-col {
+    width: 33.33333%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.form-section__button-col > .button {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.form-section__info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.form-section__info > span,
+.form-section__info > b {
+  display: block;
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.form-section__info > span {
+  font-size: 1.4rem;
+  line-height: 1.28571;
+}
+
+.form-section__info > b {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
+}
+
+@media all and (max-width: 767px) {
+  .form-section__info > b {
+    display: none;
+  }
 }

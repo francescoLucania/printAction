@@ -52,33 +52,33 @@
             }
         }
     }
+}
 
-    &__phone-link {
-        @include font(1.6rem,1.6rem);
-        @include interact(opacity, .85);
-        order: 1;
-        display: flex;
-        align-items: center;
-        color: $color-light;
-        text-decoration: none;
+.phone-link {
+    @include font(1.6rem,1.6rem);
+    @include interact(opacity, .85);
+    order: 1;
+    display: flex;
+    align-items: center;
+    color: $color-light;
+    text-decoration: none;
 
-        @include mq(sm) {
-            justify-content: center;
-            margin-bottom:1rem;
-        }
+    @include mq(sm) {
+        justify-content: center;
+        margin-bottom:1rem;
+    }
 
-        @include mq(md) {
-            order: 2;
-            display: inline-flex;
-        }
+    @include mq(md) {
+        order: 2;
+        display: inline-flex;
+    }
 
-        > img {
-            margin-right: 1rem;
-            vertical-align: top;
-        }
+    > img {
+        margin-right: 1rem;
+        vertical-align: top;
+    }
 
-        > span {
-            display: block;
-        }
+    > span {
+        display: block;
     }
 }

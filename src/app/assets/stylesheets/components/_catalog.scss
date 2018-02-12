@@ -26,6 +26,11 @@
 
     &__grid {
 
+        @include mq(sm) {
+            background: #fff;
+            padding-bottom: 9rem;
+        }
+
         @include mq(md) {
             @include grid;
             align-items: stretch;

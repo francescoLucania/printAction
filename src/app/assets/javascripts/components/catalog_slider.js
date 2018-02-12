@@ -36,7 +36,7 @@ $(function() {
 
                 $(this).removeClass('is-active');
 
-                $(this).closest('.js-catalog-slider-box').removeClass('not-actions');
+                // $(this).closest('.js-catalog-slider-box').removeClass('not-actions');
 
                 $(this).closest('.catalog__item').find('.catalog__item-label').css('display','');
 
@@ -44,7 +44,7 @@ $(function() {
 
                 $(this).addClass('is-active');
 
-                $(this).closest('.js-catalog-slider-box').addClass('not-actions');
+                // $(this).closest('.js-catalog-slider-box').addClass('not-actions');
 
                 $(this).closest('.catalog__item').find('.catalog__item-label').css('display','none');
             }
