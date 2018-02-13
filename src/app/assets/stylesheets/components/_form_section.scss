@@ -59,7 +59,7 @@
     }
 
     &__form-grid {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
 
         @include mq(md) {
             display: flex;
@@ -80,6 +80,10 @@
                     margin-left: 3rem;
                 }
             }
+        }
+
+        .form-section__form-grid {
+            margin-top: -1rem;
         }
     }
 
@@ -150,6 +154,12 @@
     top: 1rem;
     right: 1rem;
 
+    @include mq(md) {
+        top: 3rem;
+        right: 3rem;
+        background: #fff;
+    }
+
     &::before,
     &::after {
         position: absolute;
@@ -159,6 +169,11 @@
         height: .3rem;
         background: $color-brand;
         content: '';
+
+        @include mq(md) {
+            background: #fff;
+        }
+
     }
 
     &::before {
@@ -169,4 +184,12 @@
         transform: translateY(-50%) rotate(45deg);
     }
 
+    &:active {
+        top: 1rem;
+
+        @include mq(md) {
+            top: 3rem;
+            right: 3rem;
+        }
+    }
 }

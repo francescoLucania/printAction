@@ -3708,21 +3708,9 @@ a.button {
   }
 }
 
-@media all and (min-width: 768px) {
-  .programs-tab {
-    margin: 5rem 0 0;
-    overflow-x: auto;
-  }
-}
-
-@media all and (min-width: 1400px) {
-  .programs-tab {
-    margin: 5rem 0 0;
-  }
-}
-
 .programs-tab__products {
   position: relative;
+  background: #fff;
 }
 
 @media all and (min-width: 768px) {
@@ -3735,6 +3723,10 @@ a.button {
   .programs-tab__products {
     width: 60%;
   }
+}
+
+.programs-tab__complementary {
+  background: #fff;
 }
 
 @media all and (min-width: 768px) {
@@ -3793,9 +3785,12 @@ a.button {
   }
 }
 
+.programs-tab__header:empty {
+  display: none;
+}
+
 .programs-tab__products-grid, .programs-tab__complementary-grid {
   position: relative;
-  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3827,6 +3822,7 @@ a.button {
 .programs-tab__product-item, .programs-tab__complementary-item {
   position: relative;
   text-align: center;
+  font-family: "Proxima-Nova-Rg", "HelveticaNeue", "Helvetica Neue", sans-serif;
 }
 
 @media all and (max-width: 767px) {
@@ -3874,6 +3870,13 @@ a.button {
   display: block;
   text-transform: uppercase;
   margin-top: auto;
+}
+
+.programs-tab__product-item > span[data-price] {
+  font-size: 2.2rem;
+  line-height: 1.36364;
+  font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
+  color: #095dbb;
 }
 
 @media all and (min-width: 768px) {
@@ -4040,7 +4043,7 @@ a.button {
 }
 
 .form-section__form-grid {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media all and (min-width: 768px) {
@@ -4066,6 +4069,10 @@ a.button {
   .form-section__form-grid > .input:last-child {
     margin-left: 3rem;
   }
+}
+
+.form-section__form-grid .form-section__form-grid {
+  margin-top: -1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -4148,6 +4155,14 @@ a.button {
   right: 1rem;
 }
 
+@media all and (min-width: 768px) {
+  .mfp-close {
+    top: 3rem;
+    right: 3rem;
+    background: #fff;
+  }
+}
+
 .mfp-close::before, .mfp-close::after {
   position: absolute;
   top: 50%;
@@ -4158,6 +4173,12 @@ a.button {
   content: '';
 }
 
+@media all and (min-width: 768px) {
+  .mfp-close::before, .mfp-close::after {
+    background: #fff;
+  }
+}
+
 .mfp-close::before {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
@@ -4166,4 +4187,15 @@ a.button {
 .mfp-close::after {
   -webkit-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
+}
+
+.mfp-close:active {
+  top: 1rem;
+}
+
+@media all and (min-width: 768px) {
+  .mfp-close:active {
+    top: 3rem;
+    right: 3rem;
+  }
 }
