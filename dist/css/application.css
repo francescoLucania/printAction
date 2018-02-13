@@ -4011,6 +4011,7 @@ a.button {
     bottom: 0;
     left: 0;
     right: 0;
+    padding-top: 5rem;
   }
 }
 
@@ -4039,7 +4040,7 @@ a.button {
 }
 
 .form-section__form-grid {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @media all and (min-width: 768px) {
@@ -4137,4 +4138,32 @@ a.button {
 .mfp-bg {
   background: #095dbb;
   opacity: 0.85;
+}
+
+.mfp-close {
+  width: 3.2rem;
+  height: 3.2rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.mfp-close::before, .mfp-close::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: .3rem;
+  background: #095dbb;
+  content: '';
+}
+
+.mfp-close::before {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+.mfp-close::after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
 }
