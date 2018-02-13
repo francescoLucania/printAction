@@ -256,6 +256,30 @@ $(function () {
         });
     }
 
+    $(document).on('click', '.js-tab-switch', function () {
+
+        var $el = $(this);
+
+        console.log($el.data('tab'));
+
+        if ($el.data('tab') === 1) {
+
+            $('#tab-2').css('display', 'none');
+            $('#tab-1').fadeIn(500);
+        } else if ($el.data('tab') === 2) {
+
+            $('#tab-1').css('display', 'none');
+            $('#tab-2').fadeIn(500);
+
+            $('.programs-tab__header').equalHeights();
+        }
+
+        $('.programs-tab__header').equalHeights();
+
+        $('.js-tab-switch').removeClass('is-current');
+        $el.addClass('is-current');
+    });
+
     $(window).on('load', function () {
         programsHeaderHeight();
     });
@@ -277,6 +301,33 @@ $(function () {
             $('.site-header').removeClass('is-fixed');
         }
     });
+});
+'use strict';
+
+$(function () {
+
+    $(document).on('click', '.js-scroll-to', function () {
+
+        var elementClick = $(this).attr('href');
+        var destination = $(elementClick).offset().top - 98;
+        $('html:not(:animated),body:not(:animated)').animate({ scrollTop: destination }, TRANSITION_DURATION_BASE);
+
+        $(elementClick).addClass('is-active');
+
+        return false;
+    });
+});
+'use strict';
+
+$('.js-open-popup').magnificPopup({
+    type: 'inline',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+    closeMarkup: '<button class="mfp-close"></button>',
+
+    fixedContentPos: true
+
 });
 'use strict';
 

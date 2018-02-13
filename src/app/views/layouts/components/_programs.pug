@@ -4,15 +4,16 @@
             .section-box__title Базовые условия программы
 
             .programs__navigate
-                a.button.is-current(data-tab='1') Монохромные устройства
-                a.button(data-tab='1') Цветные устройства
+                a.button.js-tab-switch(data-tab='2') Монохромные устройства
+                a.button.is-current.js-tab-switch(data-tab='1') Цветные устройства
+
 
             .programs__box
 
                 .programs__tabs#tab-1
                     .programs-tab
                         .programs-tab__products
-                            .programs-tab__header  Линейка профессиональных цветных лазерных устройств
+                            .programs-tab__header 1 Линейка профессиональных цветных лазерных устройств
                             .programs-tab__products-grid
 
                                 .programs-tab__product-item
@@ -61,7 +62,7 @@
 
                     .programs-tab
                         .programs-tab__products
-                            .programs-tab__header Линейка профессиональных цветных лазерных устройств
+                            .programs-tab__header 2 Линейка профессиональных цветных лазерных устройств
                             .programs-tab__products-grid
 
                                 .programs-tab__product-item
@@ -114,4 +115,3 @@
                                     .programs-tab__image
                                         img(src='img/t1/l3.png' alt='')
                                     span 10 картриджей
-

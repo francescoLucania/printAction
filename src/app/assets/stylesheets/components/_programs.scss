@@ -16,10 +16,6 @@
 
     &__navigate {
 
-        @include mq(sm) {
-            margin: 0 2rem;
-        }
-
         @include mq(md) {
             display: flex;
             justify-content: center;
@@ -47,7 +43,12 @@
     }
 
     &__tabs {
+        display: none;
         overflow-x: auto;
+
+        &#tab-1 {
+            display: block;
+        }
     }
 }
 

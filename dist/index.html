@@ -14,7 +14,7 @@
   <body>
     <header class="site-header">
       <div class="site-header__grid"><a class="site-header__logo-box" href="#"><img src="img/logo.svg" alt="logo"></a>
-        <div class="site-header__button-box"><a class="button button--transparent" href="#">оставить заявку</a></div>
+        <div class="site-header__button-box"><a class="button button--transparent js-scroll-to" href="#form">оставить заявку</a></div>
       </div>
     </header>
     <main class="site-main">
@@ -24,12 +24,12 @@
           <article><img src="img/pm.jpg" alt="pm">
             <h1 class="promo__title">Toner Management Program</h1>
             <p>Внушительные скидки на аппараты Brother+ Фиксированные<br/> рублевые цены на расходные материалы</p>
-            <div class="promo__button-box"><a class="button" href="#">Подробнее</a></div>
+            <div class="promo__button-box"><a class="button js-scroll-to" href="#advantages">Подробнее</a></div>
           </article>
           <div class="promo__image-desktop-right"><img class="is-lg" src="img/p2.jpg" alt="p1"><img class="not-md" src="img/p3.jpg" alt="p1"></div>
         </div>
       </section>
-      <div class="section-box">
+      <div class="section-box" id="advantages">
         <div class="advantages-background"></div>
         <div class="container">
           <div class="advantages">
@@ -56,12 +56,12 @@
         <div class="container">
           <div class="programs">
             <div class="section-box__title">Базовые условия программы</div>
-            <div class="programs__navigate"><a class="button is-current" data-tab="1">Монохромные устройства</a><a class="button" data-tab="1">Цветные устройства</a></div>
+            <div class="programs__navigate"><a class="button js-tab-switch" data-tab="2">Монохромные устройства</a><a class="button is-current js-tab-switch" data-tab="1">Цветные устройства</a></div>
             <div class="programs__box">
               <div class="programs__tabs" id="tab-1">
                 <div class="programs-tab">
                   <div class="programs-tab__products">
-                    <div class="programs-tab__header"> Линейка профессиональных цветных лазерных устройств</div>
+                    <div class="programs-tab__header">1 Линейка профессиональных цветных лазерных устройств</div>
                     <div class="programs-tab__products-grid">
                       <div class="programs-tab__product-item">
                         <div class="programs-tab__image"><img src="img/t1/t1.png" alt="">
@@ -95,7 +95,7 @@
               <div class="programs__tabs" id="tab-2">
                 <div class="programs-tab">
                   <div class="programs-tab__products">
-                    <div class="programs-tab__header">Линейка профессиональных цветных лазерных устройств</div>
+                    <div class="programs-tab__header">2 Линейка профессиональных цветных лазерных устройств</div>
                     <div class="programs-tab__products-grid">
                       <div class="programs-tab__product-item">
                         <div class="programs-tab__image"><img src="img/t1/t1.png" alt="">
@@ -614,7 +614,7 @@
           </div>
         </div>
       </div>
-      <div class="section-box">
+      <div class="section-box" id="form">
         <div class="form-background"></div>
         <div class="container">
           <div class="form-section">
@@ -626,21 +626,48 @@
                     <input type="text" placeholder="Имя">
                   </div>
                   <div class="input">
-                    <input type="text" placeholder="Телефон">
+                    <input type="text" placeholder="Телефон или E-mail">
                   </div>
                 </div>
                 <div class="form-section__form-button-grid">
                   <div class="form-section__button-col">
-                    <button class="button" href="#">отправить</button>
+                    <button class="button">отправить</button>
                   </div>
                   <div class="form-section__button-col"><a class="phone-link" href="tel:88007777777"><img src="img/tel.png" alt="tel"><span>8 (800) 777 77 77</span></a></div>
-                  <div class="form-section__button-col">
-                    <button class="button button--transparent" href="#">Связаться с нами</button>
-                  </div>
+                  <div class="form-section__button-col"><a class="button button--transparent js-open-popup" href="#form-popup">Связаться с нами</a></div>
                 </div>
                 <div class="form-section__info"><span>Отправляя данную форму Вы соглашаетесь с обработкой персональных данных</span></div>
               </form>
             </div>
+          </div>
+        </div>
+        <div class="form-section__popup mfp-hide" id="form-popup">
+          <div class="form-section__body">
+            <div class="form-section__title">Оставьте заявку и мы свяжемся с вами</div>
+            <form>
+              <div class="form-section__form-grid">
+                <div class="input">
+                  <input type="text" placeholder="Имя">
+                </div>
+                <div class="input">
+                  <input type="text" placeholder="Город">
+                </div>
+              </div>
+              <div class="form-section__form-grid">
+                <div class="input">
+                  <input type="phone" placeholder="Телефон">
+                </div>
+                <div class="input">
+                  <input type="email" placeholder="E-mail">
+                </div>
+              </div>
+              <div class="form-section__form-button-grid">
+                <div class="form-section__button-col">
+                  <button class="button">отправить</button>
+                </div>
+              </div>
+              <div class="form-section__info"><span>Отправляя данную форму Вы соглашаетесь с обработкой персональных данных</span></div>
+            </form>
           </div>
         </div>
       </div>

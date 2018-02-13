@@ -1,4 +1,4 @@
-.section-box
+.section-box#form
     .form-background
     .container
         .form-section
@@ -11,11 +11,11 @@
                             input(type='text' placeholder='Имя')
 
                         .input
-                            input(type='text' placeholder='Телефон')
+                            input(type='text' placeholder='Телефон или E-mail')
 
                     .form-section__form-button-grid
                         .form-section__button-col
-                            button.button(href='#') отправить
+                            button.button отправить
 
                         .form-section__button-col
                             a.phone-link(href='tel:88007777777')
@@ -23,8 +23,36 @@
                                 span 8 (800) 777 77 77
 
                         .form-section__button-col
-                            button.button.button--transparent(href='#') Связаться с нами
+                            a.button.button--transparent.js-open-popup(href='#form-popup') Связаться с нами
 
                     .form-section__info
                         span Отправляя данную форму Вы соглашаетесь с обработкой персональных данных
+
+    .form-section__popup.mfp-hide#form-popup
+        .form-section__body
+            .form-section__title Оставьте заявку и мы свяжемся с вами
+            form
+                .form-section__form-grid
+
+                    .input
+                        input(type='text' placeholder='Имя')
+
+                    .input
+                        input(type='text' placeholder='Город')
+
+                .form-section__form-grid
+
+                    .input
+                        input(type='phone' placeholder='Телефон')
+
+                    .input
+                        input(type='email' placeholder='E-mail')
+
+                .form-section__form-button-grid
+                    .form-section__button-col
+                        button.button отправить
+
+                .form-section__info
+                    span Отправляя данную форму Вы соглашаетесь с обработкой персональных данных
+
 
