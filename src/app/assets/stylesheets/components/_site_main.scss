@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 .site-main {
+
+    @include mq(md) {
+        margin-top: 11.8rem; // header h
+    }
+
     @if $enable-sticky-footer == true {
         .mod_no-flexboxtweener & {
             flex: 1;

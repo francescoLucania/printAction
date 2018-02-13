@@ -1,30 +1,21 @@
 $(function() {
 
-    if (Modernizr.mq(mq.sm.str)) {
+    function programsHeaderHeight() {
 
-        $('.js-programs-slider').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            customPaging: function (slider, i) {
-                return $('<span></span>');
-            }
-        });
+        $('.programs').find('.programs-tab').each(function () {
 
-        $(document).on('click', '.js-programs-next', function () {
+            var $el = $(this);
 
-            $(this).closest('.programs-tab__products').find('.js-programs-slider').slick('slickNext');
+            $el.find('.programs-tab__header').equalHeights();
 
-            return false
-        });
-
-        $(document).on('click', '.js-programs-prev', function () {
-
-            $(this).closest('.programs-tab__products').find('.js-programs-slider').slick('slickPrev');
-
-            return false
         });
     }
 
+
+    $(window).on('load',function () {
+        programsHeaderHeight();
+    });
+    $(window).smartresize(function() {
+        programsHeaderHeight();
+    });
 });

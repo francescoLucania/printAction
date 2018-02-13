@@ -32,9 +32,5 @@
 
     &--not-bottom-padding {
         padding-bottom: 0;
-
-        @include mq(sm) {
-            display: none;
-        }
     }
 }

@@ -4,111 +4,114 @@
             .section-box__title Базовые условия программы
 
             .programs__navigate
-                a.button.is-current Монохромные устройства
-                a.button Цветные устройства
+                a.button.is-current(data-tab='1') Монохромные устройства
+                a.button(data-tab='1') Цветные устройства
 
-            .programs__tabs
+            .programs__box
 
-                .programs-tab
-                    .programs-tab__products
-                        .programs-tab__header  Линейка профессиональных цветных лазерных устройств
-                        .programs-tab__products-grid.js-programs-slider
+                .programs__tabs#tab-1
+                    .programs-tab
+                        .programs-tab__products
+                            .programs-tab__header  Линейка профессиональных цветных лазерных устройств
+                            .programs-tab__products-grid
 
-                            .programs-tab__product-item
-                                .programs-tab__image
-                                    img(src='img/t1/t1.png' alt='')
-                                    .programs-tab__action(data-action)
-                                        .programs-tab__action-content
-                                            span Скидка
-                                            b 65%
+                                .programs-tab__product-item
+                                    .programs-tab__image
+                                        img(src='img/t1/t1.png' alt='')
+                                        .programs-tab__action(data-action)
+                                            .programs-tab__action-content
+                                                span Скидка
+                                                b 65%
 
-                                span HL-L9310CDW
+                                    span HL-L9310CDW
 
-                            .programs-tab__product-item(data-symbol='+')
-                                .programs-tab__image
-                                    img(src='img/t1/t2.png' alt='')
-                                    .programs-tab__action(data-action)
-                                        .programs-tab__action-content
-                                            span Скидка
-                                            b 65%
-
-
-                                span MFC-L9570CDW
+                                .programs-tab__product-item(data-symbol='+')
+                                    .programs-tab__image
+                                        img(src='img/t1/t2.png' alt='')
+                                        .programs-tab__action(data-action)
+                                            .programs-tab__action-content
+                                                span Скидка
+                                                b 65%
 
 
-
-                        .arrows
-                            a.arrows__item.js-programs-prev(href='#')
-                            a.arrows__item.js-programs-next(href='#')
-
-                    .programs-tab__complementary
-                        .programs-tab__header
-                            span Контракт 36 месяцев
-                        .programs-tab__complementary-grid(data-symbol='+')
-
-                            .programs-tab__complementary-item
-                                .programs-tab__image
-                                    img(src='img/t1/l1.png' alt='')
-                                span 8 ВК картриджей
+                                    span MFC-L9570CDW
 
 
-                            .programs-tab__complementary-item(data-symbol='+')
-                                .programs-tab__image
-                                    img(src='img/t1/l2.png' alt='')
-                                span 12 CMY картриджей
-                .programs-tab
-                    .programs-tab__products
-                        .programs-tab__header Линейка профессиональных цветных лазерных устройств
-                        .programs-tab__products-grid
+                        .programs-tab__complementary
+                            .programs-tab__header
+                                span Контракт 36 месяцев
+                            .programs-tab__complementary-grid(data-symbol='+')
 
-                            .programs-tab__product-item
-                                .programs-tab__image
-                                    img(src='img/t1/t1.png' alt='')
-                                    .programs-tab__action(data-action)
-                                        .programs-tab__action-content
-                                            span Скидка
-                                            b 65%
-
-                                span HL-L9310CDW
-
-                            .programs-tab__product-item(data-quantitative-modification data-symbol='или')
-                                .programs-tab__image
-                                    img(src='img/t1/t2.png' alt='')
-                                    .programs-tab__action(data-action)
-                                        .programs-tab__action-content
-                                            span Скидка
-                                            b 65%
+                                .programs-tab__complementary-item
+                                    .programs-tab__image
+                                        img(src='img/t1/l1.png' alt='')
+                                    span 8 ВК картриджей
 
 
-                                span MFC-L9570CDW
-
-                            .programs-tab__product-item(data-quantitative-modification data-symbol='или')
-                                .programs-tab__image
-                                    img(src='img/t1/t2.png' alt='')
-                                    .programs-tab__action(data-action)
-                                        .programs-tab__action-content
-                                            span Скидка
-                                            b 65%
+                                .programs-tab__complementary-item(data-symbol='+')
+                                    .programs-tab__image
+                                        img(src='img/t1/l2.png' alt='')
+                                    span 12 CMY картриджей
 
 
-                                span MFC-L9570CDW
 
 
-                    .programs-tab__complementary
-                        .programs-tab__header(data-quantitative-modification)
-                            span Контракт 24 месяцев
-                            span Контракт 36 месяцев
 
-                        .programs-tab__complementary-grid(data-symbol='+')
+                .programs__tabs#tab-2
 
-                            .programs-tab__complementary-item
-                                .programs-tab__image
-                                    img(src='img/t1/l3.png' alt='')
-                                span 8 картриджей
+                    .programs-tab
+                        .programs-tab__products
+                            .programs-tab__header Линейка профессиональных цветных лазерных устройств
+                            .programs-tab__products-grid
+
+                                .programs-tab__product-item
+                                    .programs-tab__image
+                                        img(src='img/t1/t1.png' alt='')
+                                        .programs-tab__action(data-action)
+                                            .programs-tab__action-content
+                                                span Скидка
+                                                b 65%
+
+                                    span HL-L9310CDW
+
+                                .programs-tab__product-item(data-quantitative-modification data-symbol='или')
+                                    .programs-tab__image
+                                        img(src='img/t1/t2.png' alt='')
+                                        .programs-tab__action(data-action)
+                                            .programs-tab__action-content
+                                                span Скидка
+                                                b 65%
 
 
-                            .programs-tab__complementary-item(data-symbol='или')
-                                .programs-tab__image
-                                    img(src='img/t1/l3.png' alt='')
-                                span 10 картриджей
+                                    span MFC-L9570CDW
+
+                                .programs-tab__product-item(data-quantitative-modification data-symbol='или')
+                                    .programs-tab__image
+                                        img(src='img/t1/t2.png' alt='')
+                                        .programs-tab__action(data-action)
+                                            .programs-tab__action-content
+                                                span Скидка
+                                                b 65%
+
+
+                                    span MFC-L9570CDW
+
+
+                        .programs-tab__complementary
+                            .programs-tab__header(data-quantitative-modification)
+                                span Контракт 24 месяцев
+                                span Контракт 36 месяцев
+
+                            .programs-tab__complementary-grid(data-symbol='+')
+
+                                .programs-tab__complementary-item
+                                    .programs-tab__image
+                                        img(src='img/t1/l3.png' alt='')
+                                    span 8 картриджей
+
+
+                                .programs-tab__complementary-item(data-symbol='или')
+                                    .programs-tab__image
+                                        img(src='img/t1/l3.png' alt='')
+                                    span 10 картриджей
 
