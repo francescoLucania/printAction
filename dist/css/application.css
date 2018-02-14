@@ -1707,8 +1707,28 @@ a.button {
   opacity: .2;
 }
 
+.input--invalid {
+  position: relative;
+}
+
 .input--invalid > input {
   border-color: red;
+}
+
+.input--invalid::before {
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  top: calc(100% + .8rem);
+  left: 0;
+  color: red;
+  content: attr(data-error-txt);
+}
+
+@media all and (max-width: 767px) {
+  .input--invalid::before {
+    top: calc(100% + .3rem);
+  }
 }
 
 .label--has-checkbox {
@@ -1857,8 +1877,28 @@ a.button {
   opacity: .2;
 }
 
+.textarea--invalid {
+  position: relative;
+}
+
 .textarea--invalid > textarea {
   border-color: red;
+}
+
+.textarea--invalid::before {
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  top: calc(100% + .8rem);
+  left: 0;
+  color: red;
+  content: attr(data-error-txt);
+}
+
+@media all and (max-width: 767px) {
+  .textarea--invalid::before {
+    top: calc(100% + .3rem);
+  }
 }
 
 .container {
@@ -2846,6 +2886,12 @@ a.button {
   .site-header__button-box > .button {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .site-main {
+    margin-top: 9.4rem;
   }
 }
 

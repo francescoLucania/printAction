@@ -7,10 +7,10 @@
                 form
                     .form-section__form-grid
 
-                        .input
+                        .input.input--invalid(data-error-txt='Введите имя')
                             input(type='text' placeholder='Имя')
 
-                        .input
+                        .input.input--invalid(data-error-txt='Введите телефон')
                             input(type='text' placeholder='Телефон')
 
                     .form-section__form-button-grid
@@ -28,6 +28,7 @@
                     .form-section__info
                         span Отправляя данную форму Вы соглашаетесь с обработкой персональных данных
                         b * Предложение действительно только для юридических лиц
+                        span ООО «Бразер»
 
     .form-section__popup.mfp-hide#form-popup
         .form-section__body
@@ -35,21 +36,21 @@
             form
                 .form-section__form-grid
 
-                    .input
+                    .input.input--invalid(data-error-txt='Введите имя')
                         input(type='text' placeholder='Имя')
 
-                    .input
+                    .input.input--invalid(data-error-txt='Введите город')
                         input(type='text' placeholder='Город')
 
                 .form-section__form-grid
 
-                    .input
+                    .input.input--invalid(data-error-txt='Введите телефон')
                         input(type='phone' placeholder='Телефон')
 
                     .input
                         input(type='email' placeholder='E-mail')
 
-                .textarea
+                .textarea.input--invalid(data-error-txt='Введите текст сообщения')
                     textarea(placeholder='Сообщение')
 
                 .form-section__form-button-grid
@@ -58,5 +59,7 @@
 
                 .form-section__info
                     span Отправляя данную форму Вы соглашаетесь с обработкой персональных данных
+                    b * Предложение действительно только для юридических лиц
+                    span ООО «Бразер»
 
 
