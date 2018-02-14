@@ -84,9 +84,6 @@
     }
 
     &__item-label {
-        position: absolute;
-        top: 0;
-        left: 0;
         display: flex;
         flex-direction: column;
         padding: 8rem 2rem 3rem;
@@ -156,36 +153,51 @@
 
     &__item-content {
         @include size(100%);
-        padding: 2rem;
         background: #fff;
         opacity: 0;
-        transition: opacity $transition-duration-base;
 
         &.is-active {
+            position: relative;
             opacity: 1;
+            height: auto !important;
         }
 
-        @include mq(md) {
-            padding: 3.5rem 3.5rem;
-        }
-
-        @include mq(xl) {
+        @include mq(sm) {
             position: absolute;
             top: 0;
             left: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        @include mq(md) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
             display: flex;
             align-items: center;
         }
 
         > article {
             width: 100%;
+            padding: 2rem;
+
+            @include mq(md) {
+                padding: 3.5rem 3.5rem;
+            }
 
             > h4 {
                 @include text-sm;
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
 
                 @include mq(md) {
                     @include text-lg;
+                    margin-bottom: 2rem;
+                }
+
+                @include mq(lg) {
                     margin-bottom: 3rem;
                 }
             }

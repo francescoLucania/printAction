@@ -396,15 +396,14 @@ $(function () {
         }
     }
 
-    $(window).on('load', function () {
-        if (Modernizr.mq(mq.xl.str)) {
-            $('.catalog__item').equalHeights();
-        }
-    });
+    if (Modernizr.mq(mq.xl.str)) {
 
-    $(window).smartresize(function () {
-        if (Modernizr.mq(mq.xl.str)) {
+        $(window).on('load', function () {
             $('.catalog__item').equalHeights();
-        }
-    });
+        });
+
+        $(window).smartresize(function () {
+            $('.catalog__item').equalHeights();
+        });
+    }
 });

@@ -53,6 +53,7 @@
         > p {
             @include text-sm;
             margin-top: 3rem;
+            font-family: $font-family-reg;
 
             @include mq(md) {
                 @include text-md;
