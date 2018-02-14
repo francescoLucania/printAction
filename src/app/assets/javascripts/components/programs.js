@@ -36,6 +36,8 @@ $(function() {
         $('.js-tab-switch').removeClass('is-current');
         $el.addClass('is-current');
 
+        return false
+
     });
 
 
