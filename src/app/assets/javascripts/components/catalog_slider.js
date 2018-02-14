@@ -25,7 +25,6 @@ $(function() {
 
             return false
         });
-
     }
 
     function itemOpenContent() {
@@ -48,7 +47,6 @@ $(function() {
 
                 $(this).closest('.catalog__item').find('.catalog__item-label').css('display','none');
             }
-
             return false
         });
     }
@@ -59,12 +57,23 @@ $(function() {
 
     if (Modernizr.mq(mq.md.str)) {
 
-        if (Modernizr.mq(mq.lg.str)) {
+        if (Modernizr.mq(mq.xl.str)) {
 
         } else {
             itemOpenContent();
         }
-
-
     }
+
+    $(window).on('load',function () {
+        if (Modernizr.mq(mq.xl.str)) {
+            $('.catalog__item').equalHeights();
+        }
+    });
+
+    $(window).smartresize(function() {
+        if (Modernizr.mq(mq.xl.str)) {
+            $('.catalog__item').equalHeights();
+        }
+    });
+
 });

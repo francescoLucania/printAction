@@ -16,7 +16,7 @@
 
 .not-md {
 
-    @include mq(lg) {
+    @include mq(xl) {
         display: none;
     }
 }
@@ -24,7 +24,7 @@
 .is-lg {
     display: none;
 
-    @include mq(lg) {
+    @include mq(xl) {
         display: block;
     }
 }

@@ -22,18 +22,6 @@
             text-decoration: none;
         }
 
-        &.is-current {
-            @include interact(background, transparent);
-            @include interact(opacity, .85);
-            padding: 1.7rem 2.45rem;
-            border: solid .3rem;
-            background: transparent;
-            box-shadow: none;
-            border-color: $color-current;
-            color: $color-lighter;
-            pointer-events: none;
-        }
-
         &--read-more {
             position: relative;
             display: flex;
@@ -87,6 +75,16 @@
             > span {
                 display: block;
             }
+        }
+
+        &.is-current {
+            @include interact(background, transparent);
+            @include interact(opacity, .85);
+            border: solid .3rem $color-brand;
+            background: $color-brand;
+            box-shadow: none;
+            color: #fff;
+            pointer-events: none;
         }
 
         &--transparent-alternative {

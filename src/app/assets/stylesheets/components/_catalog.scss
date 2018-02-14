@@ -69,7 +69,7 @@
 
         &:hover {
 
-            @include mq(lg) {
+            @include mq(xl) {
 
                 .catalog__item-label {
                     opacity: 0;
@@ -106,7 +106,7 @@
             padding: 8rem 0 3rem;
         }
 
-        @include mq(lg) {
+        @include mq(xl) {
             position: relative;
         }
 
@@ -165,16 +165,16 @@
             opacity: 1;
         }
 
-        @include mq(lg) {
+        @include mq(md) {
+            padding: 3.5rem 3.5rem;
+        }
+
+        @include mq(xl) {
             position: absolute;
             top: 0;
             left: 0;
             display: flex;
             align-items: center;
-        }
-
-        @include mq(md) {
-            padding: 3.5rem 3.5rem;
         }
 
         > article {

@@ -1236,7 +1236,7 @@ table {
   line-height: 1.46154;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .not-md {
     display: none;
   }
@@ -1246,7 +1246,7 @@ table {
   display: none;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .is-lg {
     display: block;
   }
@@ -1462,25 +1462,6 @@ a.button {
   text-decoration: none;
 }
 
-.button.is-current {
-  padding: 1.7rem 2.45rem;
-  border: solid .3rem;
-  background: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #e1e1e1;
-  color: #969696;
-  pointer-events: none;
-}
-
-.mod_no-touchevents .button.is-current:hover, .mod_no-touchevents .button.is-current.hover {
-  background: transparent;
-}
-
-.mod_no-touchevents .button.is-current:hover, .mod_no-touchevents .button.is-current.hover {
-  opacity: 0.85;
-}
-
 .button--read-more {
   position: relative;
   display: -webkit-box;
@@ -1515,6 +1496,15 @@ a.button {
   opacity: 0;
 }
 
+@media all and (min-width: 1220px) {
+  .button--read-more:hover > span {
+    opacity: 0;
+  }
+  .button--read-more:hover > img {
+    opacity: 1;
+  }
+}
+
 .button--next-more {
   min-width: 19rem;
 }
@@ -1538,6 +1528,23 @@ a.button {
 
 .button--transparent > span {
   display: block;
+}
+
+.button.is-current {
+  border: solid 0.3rem #095dbb;
+  background: #095dbb;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  pointer-events: none;
+}
+
+.mod_no-touchevents .button.is-current:hover, .mod_no-touchevents .button.is-current.hover {
+  background: transparent;
+}
+
+.mod_no-touchevents .button.is-current:hover, .mod_no-touchevents .button.is-current.hover {
+  opacity: 0.85;
 }
 
 .button--transparent-alternative {
@@ -1821,10 +1828,29 @@ a.button {
 }
 
 .textarea > textarea {
+  font-size: 1.6rem;
+  line-height: 1;
   display: block;
   width: 100%;
-  padding: .5rem .75rem;
-  border: 1px solid rgba(18, 18, 18, 0.4);
+  padding: 1.4rem 1.9rem;
+  border: 1px solid #e1e1e1;
+  outline: none;
+}
+
+.textarea > textarea::-webkit-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.textarea > textarea:-ms-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.textarea > textarea::-ms-input-placeholder {
+  color: rgba(18, 18, 18, 0.4);
+}
+
+.textarea > textarea::placeholder {
+  color: rgba(18, 18, 18, 0.4);
 }
 
 .textarea > textarea:disabled {
@@ -1849,7 +1875,13 @@ a.button {
 
 @media all and (min-width: 768px) {
   .container {
-    max-width: 100%;
+    max-width: 768px;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .container {
+    max-width: 1220px;
   }
 }
 
@@ -1868,8 +1900,15 @@ a.button {
 
 @media all and (min-width: 768px) {
   .container {
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -1911,7 +1950,14 @@ a.button {
 @media all and (min-width: 768px) {
   .nested-lists ol {
     margin-right: 0rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .nested-lists ol {
+    margin-right: 0rem;
+    margin-left: 2rem;
   }
 }
 
@@ -1931,7 +1977,14 @@ a.button {
 
 @media all and (min-width: 768px) {
   .nested-lists ol {
-    margin-top: 1.33333rem;
+    margin-top: 0.66667rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .nested-lists ol {
+    margin-top: 0.66667rem;
     margin-bottom: 0rem;
   }
 }
@@ -1954,7 +2007,16 @@ a.button {
 
 @media all and (min-width: 768px) {
   .nested-lists li:not(:first-child) {
-    margin-top: 1.33333rem;
+    margin-top: 0.66667rem;
+  }
+  .nested-lists li:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .nested-lists li:not(:first-child) {
+    margin-top: 0.66667rem;
   }
   .nested-lists li:not(:last-child) {
     margin-bottom: 0rem;
@@ -2078,10 +2140,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > h1:not(:first-child), .wysiwyg h2:not(:first-child), .wysiwyg h3:not(:first-child), .wysiwyg h4:not(:first-child), .wysiwyg h5:not(:first-child), .wysiwyg h6:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg > h1:not(:last-child), .wysiwyg h2:not(:last-child), .wysiwyg h3:not(:last-child), .wysiwyg h4:not(:last-child), .wysiwyg h5:not(:last-child), .wysiwyg h6:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > h1:not(:first-child), .wysiwyg h2:not(:first-child), .wysiwyg h3:not(:first-child), .wysiwyg h4:not(:first-child), .wysiwyg h5:not(:first-child), .wysiwyg h6:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg > h1:not(:last-child), .wysiwyg h2:not(:last-child), .wysiwyg h3:not(:last-child), .wysiwyg h4:not(:last-child), .wysiwyg h5:not(:last-child), .wysiwyg h6:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -2110,10 +2181,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > blockquote:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg > blockquote:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > blockquote:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg > blockquote:not(:last-child) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -2128,7 +2208,7 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > blockquote {
-    padding-left: 4rem;
+    padding-left: 2rem;
   }
 }
 
@@ -2158,10 +2238,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > figure:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg > figure:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > figure:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg > figure:not(:last-child) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -2198,10 +2287,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > img:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg > img:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > img:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg > img:not(:last-child) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -2225,10 +2323,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > dl:not(:first-child) {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .wysiwyg > dl:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > dl:not(:first-child) {
+    margin-top: 2rem;
+  }
+  .wysiwyg > dl:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -2259,7 +2366,16 @@ a.button {
     margin-top: 0rem;
   }
   .wysiwyg > dl > dt:not(:last-child) {
-    margin-bottom: 1.33333rem;
+    margin-bottom: 0.66667rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > dl > dt:not(:first-child) {
+    margin-top: 0rem;
+  }
+  .wysiwyg > dl > dt:not(:last-child) {
+    margin-bottom: 0.66667rem;
   }
 }
 
@@ -2286,11 +2402,22 @@ a.button {
 @media all and (min-width: 768px) {
   .wysiwyg > ol:not([class]):not(:first-child),
   .wysiwyg > ul:not([class]):not(:first-child) {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .wysiwyg > ol:not([class]):not(:last-child),
   .wysiwyg > ul:not([class]):not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > ol:not([class]):not(:first-child),
+  .wysiwyg > ul:not([class]):not(:first-child) {
+    margin-top: 2rem;
+  }
+  .wysiwyg > ol:not([class]):not(:last-child),
+  .wysiwyg > ul:not([class]):not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -2318,7 +2445,16 @@ a.button {
   .wysiwyg > ol:not([class]) ol, .wysiwyg > ol:not([class]) ul,
   .wysiwyg > ul:not([class]) ol,
   .wysiwyg > ul:not([class]) ul {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > ol:not([class]) ol, .wysiwyg > ol:not([class]) ul,
+  .wysiwyg > ul:not([class]) ol,
+  .wysiwyg > ul:not([class]) ul {
+    margin-top: 1rem;
     margin-bottom: 0rem;
   }
 }
@@ -2344,7 +2480,15 @@ a.button {
   .wysiwyg > ol:not([class]) li,
   .wysiwyg > ul:not([class]) li {
     margin-right: 0rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > ol:not([class]) li,
+  .wysiwyg > ul:not([class]) li {
+    margin-right: 0rem;
+    margin-left: 2rem;
   }
 }
 
@@ -2370,7 +2514,18 @@ a.button {
 @media all and (min-width: 768px) {
   .wysiwyg > ol:not([class]) li:not(:first-child):not(:first-child),
   .wysiwyg > ul:not([class]) li:not(:first-child):not(:first-child) {
-    margin-top: 2rem;
+    margin-top: 1rem;
+  }
+  .wysiwyg > ol:not([class]) li:not(:first-child):not(:last-child),
+  .wysiwyg > ul:not([class]) li:not(:first-child):not(:last-child) {
+    margin-bottom: 0rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > ol:not([class]) li:not(:first-child):not(:first-child),
+  .wysiwyg > ul:not([class]) li:not(:first-child):not(:first-child) {
+    margin-top: 1rem;
   }
   .wysiwyg > ol:not([class]) li:not(:first-child):not(:last-child),
   .wysiwyg > ul:not([class]) li:not(:first-child):not(:last-child) {
@@ -2424,10 +2579,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg > p:not(:first-child) {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .wysiwyg > p:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg > p:not(:first-child) {
+    margin-top: 2rem;
+  }
+  .wysiwyg > p:not(:last-child) {
+    margin-bottom: 2rem;
   }
 }
 
@@ -2455,10 +2619,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg__table:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg__table:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg__table:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg__table:not(:last-child) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -2519,10 +2692,19 @@ a.button {
 
 @media all and (min-width: 768px) {
   .wysiwyg__video:not(:first-child) {
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
   .wysiwyg__video:not(:last-child) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
+  .wysiwyg__video:not(:first-child) {
+    margin-top: 4rem;
+  }
+  .wysiwyg__video:not(:last-child) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -2874,7 +3056,7 @@ a.button {
   background: #f0f0f0;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo {
     background: transparent;
   }
@@ -2910,7 +3092,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__article {
     text-align: center;
     margin: 0;
@@ -2934,7 +3116,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__article > article {
     width: 56%;
     padding: 0 4rem;
@@ -2955,10 +3137,19 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__article > article > p {
     font-size: 2.6rem;
     line-height: 1.46154;
+  }
+  .promo__article > article > p br {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .promo__article > article > p br {
+    display: none;
   }
 }
 
@@ -3022,7 +3213,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__button-box {
     margin-top: 5rem;
     text-align: center;
@@ -3037,7 +3228,7 @@ a.button {
   display: none;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__image-desktop-left, .promo__image-desktop-right {
     display: block;
     max-width: 20%;
@@ -3054,13 +3245,7 @@ a.button {
   vertical-align: top;
 }
 
-@media all and (min-width: 768px) {
-  .promo__image-desktop-left {
-    display: none;
-  }
-}
-
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .promo__image-desktop-left {
     display: block;
   }
@@ -3133,8 +3318,15 @@ a.button {
 
 @media all and (min-width: 768px) and (min-width: 768px) {
   .advantages {
-    margin-right: -2rem;
-    margin-left: -2rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 1220px) {
+  .advantages {
+    margin-right: -1rem;
+    margin-left: -1rem;
   }
 }
 
@@ -3166,8 +3358,15 @@ a.button {
 
 @media all and (min-width: 768px) and (min-width: 768px) {
   .advantages__column {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 1220px) {
+  .advantages__column {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -3267,8 +3466,15 @@ a.button {
 
 @media all and (min-width: 768px) and (min-width: 768px) {
   .catalog__grid {
-    margin-right: -2rem;
-    margin-left: -2rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 1220px) {
+  .catalog__grid {
+    margin-right: -1rem;
+    margin-left: -1rem;
   }
 }
 
@@ -3307,8 +3513,15 @@ a.button {
 
 @media all and (min-width: 768px) and (min-width: 768px) {
   .catalog__column {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media all and (min-width: 768px) and (min-width: 1220px) {
+  .catalog__column {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -3331,7 +3544,7 @@ a.button {
   background: #fff;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .catalog__item:hover .catalog__item-label {
     opacity: 0;
   }
@@ -3385,7 +3598,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .catalog__item-label {
     position: relative;
   }
@@ -3460,7 +3673,13 @@ a.button {
   opacity: 1;
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 768px) {
+  .catalog__item-content {
+    padding: 3.5rem 3.5rem;
+  }
+}
+
+@media all and (min-width: 1220px) {
   .catalog__item-content {
     position: absolute;
     top: 0;
@@ -3471,12 +3690,6 @@ a.button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .catalog__item-content {
-    padding: 3.5rem 3.5rem;
   }
 }
 
@@ -3646,6 +3859,12 @@ a.button {
 }
 
 @media all and (min-width: 768px) {
+  .programs__box {
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 768px) {
   .programs__navigate {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3719,7 +3938,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .programs-tab__products {
     width: 60%;
   }
@@ -3735,7 +3954,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .programs-tab__complementary {
     width: 40%;
   }
@@ -3858,6 +4077,12 @@ a.button {
   width: 50%;
 }
 
+@media all and (min-width: 1220px) {
+  .programs-tab__product-item {
+    width: 50%;
+  }
+}
+
 @media all and (min-width: 1400px) {
   .programs-tab__product-item {
     width: 27rem;
@@ -3895,7 +4120,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .programs-tab__complementary-item {
     padding: 0;
   }
@@ -3907,7 +4132,7 @@ a.button {
   }
 }
 
-@media all and (min-width: 1400px) {
+@media all and (min-width: 1220px) {
   .programs-tab__complementary-item .programs-tab__image {
     padding: 0;
   }
@@ -4015,6 +4240,7 @@ a.button {
     left: 0;
     right: 0;
     padding-top: 5rem;
+    overflow-y: auto;
   }
 }
 
@@ -4033,6 +4259,20 @@ a.button {
   }
 }
 
+.form-section__body .textarea {
+  margin-bottom: 3rem;
+}
+
+.form-section__body .textarea > textarea {
+  height: 11.8rem;
+}
+
+@media all and (max-width: 767px) {
+  .form-section__body .textarea:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
 .form-section__title {
   font-size: 1.8rem;
   line-height: 1.44444;
@@ -4044,6 +4284,12 @@ a.button {
 
 .form-section__form-grid {
   margin-bottom: 3rem;
+}
+
+@media all and (max-width: 767px) {
+  .form-section__form-grid {
+    margin-bottom: 2rem;
+  }
 }
 
 @media all and (min-width: 768px) {
@@ -4069,10 +4315,6 @@ a.button {
   .form-section__form-grid > .input:last-child {
     margin-left: 3rem;
   }
-}
-
-.form-section__form-grid .form-section__form-grid {
-  margin-top: -1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -4134,12 +4376,6 @@ a.button {
   font-size: 1.6rem;
   line-height: 1.25;
   font-family: "Proxima-Nova-Bold", "HelveticaNeue", "Helvetica Neue", sans-serif;
-}
-
-@media all and (max-width: 767px) {
-  .form-section__info > b {
-    display: none;
-  }
 }
 
 .mfp-bg {

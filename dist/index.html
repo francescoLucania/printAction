@@ -24,12 +24,12 @@
           <article><img src="img/pm.jpg" alt="pm">
             <h1 class="promo__title">Toner Management Program</h1>
             <p>Внушительные скидки на аппараты Brother+ Фиксированные<br/> рублевые цены на расходные материалы</p>
-            <div class="promo__button-box"><a class="button js-scroll-to" href="#advantages">Подробнее</a></div>
+            <div class="promo__button-box"><a class="button js-scroll-to" href="#programs">Подробнее</a></div>
           </article>
           <div class="promo__image-desktop-right"><img class="is-lg" src="img/p2.jpg" alt="p1"><img class="not-md" src="img/p3.jpg" alt="p1"></div>
         </div>
       </section>
-      <div class="section-box" id="advantages">
+      <div class="section-box">
         <div class="advantages-background"></div>
         <div class="container">
           <div class="advantages">
@@ -52,11 +52,11 @@
           </div>
         </div>
       </div>
-      <div class="section-box section-box--not-bottom-padding">
+      <div class="section-box section-box--not-bottom-padding" id="programs">
         <div class="container">
           <div class="programs">
             <div class="section-box__title">Базовые условия программы</div>
-            <div class="programs__navigate"><a class="button js-tab-switch" href="#" data-tab="2">Монохромные устройства</a><a class="button is-current js-tab-switch" href="#" data-tab="1">Цветные устройства</a></div>
+            <div class="programs__navigate"><a class="button button--transparent js-tab-switch" href="#" data-tab="2">Монохромные устройства</a><a class="button button--transparent is-current js-tab-switch" href="#" data-tab="1">Цветные устройства</a></div>
             <div class="programs__box">
               <div class="programs__tabs" id="tab-1">
                 <div class="programs-tab">
@@ -98,7 +98,7 @@
                   <div class="programs-tab__products">
                     <div class="programs-tab__header">Линейка черно-белых лазерных устройств для средних и больших рабочих групп</div>
                     <div class="programs-tab__products-grid">
-                      <div class="programs-tab__product-item">
+                      <div class="programs-tab__product-item" data-quantitative-modification>
                         <div class="programs-tab__image"><img src="img/t1/b1.png" alt="">
                           <div class="programs-tab__action" data-action>
                             <div class="programs-tab__action-content"><span>Скидка</span><b>50%</b></div>
@@ -137,7 +137,7 @@
                 <div class="programs-tab">
                   <div class="programs-tab__products">
                     <div class="programs-tab__products-grid">
-                      <div class="programs-tab__product-item">
+                      <div class="programs-tab__product-item" data-quantitative-modification>
                         <div class="programs-tab__image"><img src="img/t1/b3.png" alt="">
                           <div class="programs-tab__action" data-action>
                             <div class="programs-tab__action-content"><span>Скидка</span><b>50%</b></div>
@@ -176,7 +176,7 @@
                   <div class="programs-tab__products">
                     <div class="programs-tab__header">Линейка черно-белых лазерных устройств для малых рабочих групп</div>
                     <div class="programs-tab__products-grid">
-                      <div class="programs-tab__product-item">
+                      <div class="programs-tab__product-item" data-quantitative-modification>
                         <div class="programs-tab__image"><img src="img/t1/b5.png" alt="">
                           <div class="programs-tab__action">
                             <div class="programs-tab__action-content"><span>Скидка</span><b>50%</b></div>
@@ -213,7 +213,7 @@
                   <div class="programs-tab__products">
                     <div class="programs-tab__header">или</div>
                     <div class="programs-tab__products-grid">
-                      <div class="programs-tab__product-item">
+                      <div class="programs-tab__product-item" data-quantitative-modification>
                         <div class="programs-tab__image"><img src="img/t1/b5.png" alt="">
                           <div class="programs-tab__action">
                             <div class="programs-tab__action-content"><span>Скидка</span><b>50%</b></div>
@@ -739,7 +739,7 @@
                     <input type="text" placeholder="Имя">
                   </div>
                   <div class="input">
-                    <input type="text" placeholder="Телефон или E-mail">
+                    <input type="text" placeholder="Телефон">
                   </div>
                 </div>
                 <div class="form-section__form-button-grid">
@@ -749,7 +749,7 @@
                   <div class="form-section__button-col"><a class="phone-link" href="tel:88007777777"><img src="img/tel.png" alt="tel"><span>8 (800) 777 77 77</span></a></div>
                   <div class="form-section__button-col"><a class="button button--transparent js-open-popup" href="#form-popup">Связаться с нами</a></div>
                 </div>
-                <div class="form-section__info"><span>Отправляя данную форму Вы соглашаетесь с обработкой персональных данных</span></div>
+                <div class="form-section__info"><span>Отправляя данную форму Вы соглашаетесь с обработкой персональных данных</span><b>* Предложение действительно только для юридических лиц</b></div>
               </form>
             </div>
           </div>
@@ -773,6 +773,9 @@
                 <div class="input">
                   <input type="email" placeholder="E-mail">
                 </div>
+              </div>
+              <div class="textarea">
+                <textarea placeholder="Сообщение"></textarea>
               </div>
               <div class="form-section__form-button-grid">
                 <div class="form-section__button-col">

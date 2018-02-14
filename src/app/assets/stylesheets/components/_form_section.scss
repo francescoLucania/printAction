@@ -33,6 +33,7 @@
                 left: 0;
                 right: 0;
                 padding-top: 5rem;
+                overflow-y: auto;
             }
         }
     }
@@ -48,6 +49,20 @@
             padding: 3.5rem 6rem;
             width: 73rem;
         }
+
+        .textarea {
+            margin-bottom: 3rem;
+
+            > textarea {
+                height: 11.8rem;
+            }
+
+            @include mq(sm) {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
     }
 
     &__title {
@@ -60,6 +75,10 @@
 
     &__form-grid {
         margin-bottom: 3rem;
+
+        @include mq(sm) {
+            margin-bottom: 2rem;
+        }
 
         @include mq(md) {
             display: flex;
@@ -80,10 +99,6 @@
                     margin-left: 3rem;
                 }
             }
-        }
-
-        .form-section__form-grid {
-            margin-top: -1rem;
         }
     }
 
@@ -133,10 +148,6 @@
         > b {
             @include font(1.6rem,2rem);
             font-family: $font-family-bold;
-
-            @include mq(sm) {
-                display: none;
-            }
         }
     }
 }

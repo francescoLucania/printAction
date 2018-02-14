@@ -82,7 +82,7 @@ if (enable.doubleHover) {
 // Media queries (for example: xs, sm, md, lg, xl)
 // Integer: mq.sm.int
 // String:  Modernizr.mq(mq.sm.str);
-createMq([['sm', 767], ['md', 768], ['lg', 1380]]);
+createMq([['sm', 767], ['md', 768], ['xl', 1220], ['lg', 1380]]);
 
 var TRANSITION_DURATION_BASE = 200;
 'use strict';
@@ -381,7 +381,6 @@ $(function () {
 
                 $(this).closest('.catalog__item').find('.catalog__item-label').css('display', 'none');
             }
-
             return false;
         });
     }
@@ -392,8 +391,20 @@ $(function () {
 
     if (Modernizr.mq(mq.md.str)) {
 
-        if (Modernizr.mq(mq.lg.str)) {} else {
+        if (Modernizr.mq(mq.xl.str)) {} else {
             itemOpenContent();
         }
     }
+
+    $(window).on('load', function () {
+        if (Modernizr.mq(mq.xl.str)) {
+            $('.catalog__item').equalHeights();
+        }
+    });
+
+    $(window).smartresize(function () {
+        if (Modernizr.mq(mq.xl.str)) {
+            $('.catalog__item').equalHeights();
+        }
+    });
 });
