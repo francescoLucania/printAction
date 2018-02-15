@@ -4,7 +4,17 @@ $('.js-open-popup').magnificPopup({
     removalDelay: 160,
     preloader: false,
     closeMarkup: '<button class="mfp-close"></button>',
+    fixedContentPos: true,
+    callbacks: {
+        open: function () {
 
-    fixedContentPos: true
+            $('.site-header').css({'padding-right': scrollSize().width + 'px'});
+        },
 
+        close: function () {
+
+            $('.site-header').css('padding-right', '');
+
+        }
+    }
 });
